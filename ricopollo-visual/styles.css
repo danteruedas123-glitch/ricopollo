@@ -20,7 +20,7 @@ button { font: inherit; }
 .topline span { color: var(--sun); margin: 0 7px; }
 header { height: 82px; padding: 0 5.5%; display: flex; align-items: center; justify-content: space-between; gap: 30px; background: var(--paper); position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(31,40,33,.08); }
 .brand { display: inline-flex; align-items: center; min-width: max-content; }
-.brand-logo { display: block; width: 200px; max-height: 78px; aspect-ratio: 1024 / 406; object-fit: contain; }
+.brand-logo { display: block; width: 76px; height: 76px; object-fit: contain; }
 nav { display: flex; align-items: center; gap: clamp(20px, 3.2vw, 48px); }
 nav a { font-size: 13px; font-weight: 700; transition: color .2s; }
 nav a:hover { color: var(--tomato); }
@@ -98,7 +98,7 @@ h2 { margin: 14px 0 13px; font: clamp(39px, 4.4vw, 58px)/1 var(--display); text-
 .detail strong { display: block; font-size: 11px; }
 .map-frame { width: 100%; height: 330px; border: 0; background: #e9ece6; }
 footer { padding: 31px 5.5%; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: rgba(255,255,255,.82); background: var(--green-dark); font-size: 10px; }
-footer .brand-logo { width: 170px; max-height: 68px; }
+footer .brand-logo { width: 64px; height: 64px; }
 .footer-links { display: flex; align-items: center; gap: 22px; }
 .footer-links a:hover { color: var(--sun); }
 .whatsapp-float { width: 54px; height: 54px; position: fixed; z-index: 15; right: 22px; bottom: 22px; display: grid; place-items: center; color: white; background: #20b86a; border-radius: 50%; box-shadow: 0 5px 18px rgba(0,0,0,.2); transition: transform .2s; }
@@ -121,7 +121,7 @@ footer .brand-logo { width: 170px; max-height: 68px; }
 @media (max-width: 620px) {
   .topline { height: 32px; font-size: 9px; letter-spacing: 1px; }
   header { height: 70px; }
-  header .brand-logo { width: 148px; max-height: 58px; }
+  header .brand-logo { width: 54px; height: 54px; }
   header > .order-button { min-height: 40px; margin-left: auto; padding: 0 11px; font-size: 10px; }
   header > .order-button svg { display: none; }
   .menu-toggle { display: inline-grid; place-items: center; }
@@ -163,7 +163,7 @@ footer .brand-logo { width: 170px; max-height: 68px; }
   .contact-inner { grid-template-columns: 1fr; gap: 28px; }
   .map-frame { height: 260px; }
   footer { padding: 26px 7%; align-items: flex-start; flex-direction: column; }
-  footer .brand-logo { width: 160px; max-height: 63px; }
+  footer .brand-logo { width: 54px; height: 54px; }
   .footer-links { gap: 16px; flex-wrap: wrap; }
   .whatsapp-float { width: 49px; height: 49px; right: 15px; bottom: 15px; }
 }
