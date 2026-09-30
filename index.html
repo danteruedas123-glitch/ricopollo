@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Rico Pollo Gourmet | Asadero, Pizzería y Heladería en La Loma, Cesar</title>
+  <meta name="description" content="Rico Pollo Gourmet — Tradición y Calidad. El mejor pollo asado, broaster, pizzas artesanales, comidas rápidas y helados en La Loma, El Paso, Cesar, Colombia. ¡Pide a domicilio!" />
+  <meta name="keywords" content="Rico Pollo Gourmet, asadero, pollo asado, pollo broaster, pizzería, heladería, comidas rápidas, La Loma, El Paso, Cesar, Colombia, domicilios" />
+  <meta name="author" content="Rico Pollo Gourmet" />
+  <meta property="og:title" content="Rico Pollo Gourmet | Tradición y Calidad" />
+  <meta property="og:description" content="El mejor pollo asado, pizzas y helados en La Loma, Cesar. ¡Pide tu domicilio por WhatsApp!" />
+  <meta property="og:image" content="images/hero.jpg" />
+  <meta property="og:type" content="restaurant" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="navbar__logo">
+        <img src="images/logo.jpg" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" />
+        <span class="navbar__logo-text">Rico Pollo Gourmet</span>
+      </a>
+
+      <div class="navbar__links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="menu.html" target="_blank" class="navbar__link-highlight">📋 Menú Completo ↗</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir Domicilio
+        </a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <img src="images/hero.jpg" alt="Pollo asado gourmet con acompañamientos colombianos" />
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <img src="images/logo.jpg" alt="Rico Pollo Gourmet" class="hero__logo" />
+
+      <span class="hero__badge">🔥 Asadero • Pizzería • Heladería • Comidas Rápidas</span>
+
+      <h1 class="hero__title">
+        Asadero<br /><span>Rico Pollo Gourmet</span>
+      </h1>
+
+      <p class="hero__slogan">Tradición y Calidad</p>
+
+      <p class="hero__description">
+        El sabor auténtico de La Loma, Cesar. Pollo asado al carbón, pizzas artesanales, comidas rápidas y los helados más deliciosos te esperan.
+      </p>
+
+      <div class="hero__buttons">
+        <a href="menu.html" target="_blank" class="btn-primary">
+          🍽️ Ver Menú & Ordenar ↗
+        </a>
+        <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-outline">
+          🛵 Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Desliza</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats__grid reveal">
+        <div class="stats__item">
+          <div class="stats__icon">🍗</div>
+          <div class="stats__number" data-target="5">5</div>
+          <div class="stats__label">Categorías de Menú</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__icon">🕐</div>
+          <div class="stats__number">24/7</div>
+          <div class="stats__label">Siempre Abiertos</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__icon">❄️</div>
+          <div class="stats__number">Full</div>
+          <div class="stats__label">Aire Acondicionado</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__icon">📺</div>
+          <div class="stats__number">HD</div>
+          <div class="stats__label">Pantallas Deportivas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MENÚ / CATEGORÍAS
+       ============================================ -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="menu__header reveal">
+        <span class="section-label">Nuestro Menú</span>
+        <h2 class="section-title">Sabores que Enamoran</h2>
+        <p class="section-subtitle">
+          Desde el clásico pollo asado al carbón hasta pizzas artesanales y postres irresistibles — todo hecho con amor y los ingredientes más frescos.
+        </p>
+      </div>
+
+      <div class="menu__grid">
+        <!-- Card 1: Pechuga a la Plancha & Pollos -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/pechuga-plancha-real.jpg" alt="Pechuga a la plancha con patacones y ensalada de maíz" />
+            <span class="menu-card__badge">⭐ Foto Real</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Pechugas & Pollos Asados</h3>
+            <p class="menu-card__desc">
+              Pechugas marinadas y asadas a la plancha con patacones dorados y ensalada fresca con maíz dulce. O nuestro clásico pollo al carbón.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 2: Alitas BBQ con Ajonjolí -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/alitas-bbq-real.jpg" alt="Bandeja de alitas BBQ con ajonjolí y papas a la francesa" />
+            <span class="menu-card__badge">🔥 Foto Real</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Alitas BBQ & Broaster</h3>
+            <p class="menu-card__desc">
+              Bandeja de alitas bañadas en deliciosa salsa BBQ con semillas de ajonjolí tostadas, abundante papa a la francesa y salsas de la casa.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 3: Pizzería Artesanal -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/pizza.jpg" alt="Pizza artesanal recién horneada" />
+            <span class="menu-card__badge">🍕 Artesanal</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Pizzería Artesanal</h3>
+            <p class="menu-card__desc">
+              Pizzas a la piedra con masa fresca, salsa casera y queso mozzarella abundante: Especial Rico Pollo, Hawaiana, Carnes Mixtas y Pepperoni.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 4: Súper Picadas & Asados -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/picada-mixta-real.jpg" alt="Bandeja de picada mixta familiar con carne, pollo, patacones y papas" />
+            <span class="menu-card__badge">👑 Foto Real</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Súper Picadas Familiares</h3>
+            <p class="menu-card__desc">
+              Bandeja gigante para compartir con carne asada, pechuga de pollo, salchicha, pollo crujiente, patacones, papas y salsas tártara y cheddar.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 5: Ensaladas de Frutas & Heladería -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/ensalada-frutas-real.jpg" alt="Ensalada de frutas fresca con doble bola de helado y queso rallado" />
+            <span class="menu-card__badge">🍓 Foto Real</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Ensaladas de Frutas & Helados</h3>
+            <p class="menu-card__desc">
+              Fresca, cremosa y deliciosa. Frutas frescas con crema especial, queso costeño rallado y doble bola de helado artesanal.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+
+        <!-- Card 6: Jugos Naturales 100% Frescos -->
+        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+          <div class="menu-card__image">
+            <img src="images/jugos-naturales-real.jpg" alt="Jugos naturales y limonadas de fruta fresca" />
+            <span class="menu-card__badge">🍹 Foto Real</span>
+          </div>
+          <div class="menu-card__body">
+            <h3 class="menu-card__title">Jugos Naturales & Limonadas</h3>
+            <p class="menu-card__desc">
+              100% fruta fresca en agua o leche: Limonada de coco, limonada frappé, guanábana, mora, fresa, lulo y milo frío para refrescar tu día.
+            </p>
+            <span class="menu-card__cta">
+              Ver precio y pedir ↗
+              <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Banner para ordenar en el Menú Digital Completo -->
+      <div class="menu__cta-banner reveal">
+        <div class="menu__cta-text">
+          <h3>🍽️ ¿Deseas hacer tu pedido en línea?</h3>
+          <p>Explora nuestro Menú Digital interactivo con todos los productos, combos, precios actualizados y carrito directo a WhatsApp.</p>
+        </div>
+        <a href="menu.html" target="_blank" class="btn-primary btn-cta-menu">
+          Ver Carta Completa y Ordenar ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       NOSOTROS
+       ============================================ -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrapper reveal">
+          <div class="about__image">
+            <img src="images/broaster.jpg" alt="Interior del restaurante Rico Pollo Gourmet" />
+          </div>
+          <div class="about__float-card">
+            <div class="about__float-icon">🏆</div>
+            <div class="about__float-text">
+              <strong>El Favorito</strong>
+              <span>de La Loma, Cesar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__content reveal">
+          <span class="section-label">Sobre Nosotros</span>
+          <h2 class="section-title">Más que un Restaurante,<br />una Experiencia</h2>
+          <p class="about__text">
+            En <strong>Rico Pollo Gourmet</strong> llevamos años deleitando los paladares de La Loma, El Paso y todo el departamento del Cesar con nuestro auténtico sabor. Nacimos con la pasión de ofrecer pollo asado al carbón de la más alta calidad, y hoy somos mucho más: asadero, pizzería, heladería y comidas rápidas, todo bajo un mismo techo.
+          </p>
+          <p class="about__text">
+            Nuestro compromiso es con la <strong>tradición y la calidad</strong>. Cada plato se prepara con ingredientes frescos, recetas cuidadas y el cariño que solo se encuentra en la cocina colombiana.
+          </p>
+
+          <div class="about__features">
+            <div class="about__feature">
+              <span class="about__feature-icon">🔥</span>
+              <div class="about__feature-text">
+                <strong>Asado al Carbón</strong>
+                <span>Cocción lenta sobre brasas</span>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">🧑‍🍳</span>
+              <div class="about__feature-text">
+                <strong>Recetas Únicas</strong>
+                <span>Sazón que no se repite</span>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">🛵</span>
+              <div class="about__feature-text">
+                <strong>Domicilios</strong>
+                <span>Te lo llevamos a la puerta</span>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon">💯</span>
+              <div class="about__feature-text">
+                <strong>100% Fresco</strong>
+                <span>Ingredientes del día</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPERIENCIA / INSTALACIONES
+       ============================================ -->
+  <section class="experience" id="experiencia">
+    <div class="experience__bg"></div>
+    <div class="container experience__content">
+      <div class="experience__header reveal">
+        <span class="section-label">Nuestras Instalaciones</span>
+        <h2 class="section-title">Vive la Experiencia Rico Pollo</h2>
+        <p class="section-subtitle">
+          Un espacio diseñado para que disfrutes al máximo. Ven con tu familia, amigos o pareja y pásala increíble.
+        </p>
+      </div>
+
+      <div class="experience__cards">
+        <div class="exp-card reveal">
+          <div class="exp-card__icon">❄️</div>
+          <h3 class="exp-card__title">Full Aire Acondicionado</h3>
+          <p class="exp-card__desc">
+            Nuestro local cuenta con sistema de climatización completo para que disfrutes tu comida con la máxima comodidad, sin importar el calor de afuera.
+          </p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card__icon">📺</div>
+          <h3 class="exp-card__title">Pantallas HD</h3>
+          <p class="exp-card__desc">
+            Pantallas grandes con transmisión de partidos de fútbol, eventos deportivos y más. El plan perfecto: buena comida y buen fútbol.
+          </p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card__icon">👨‍👩‍👧‍👦</div>
+          <h3 class="exp-card__title">Ambiente Familiar</h3>
+          <p class="exp-card__desc">
+            Un espacio acogedor para compartir en familia o con amigos. Amplio, cómodo y con la mejor atención para que te sientas como en casa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CTA BANNER
+       ============================================ -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner reveal">
+        <div class="cta-banner__emoji">🍗🔥</div>
+        <h2 class="cta-banner__title">¿Se te antojó? ¡No esperes más!</h2>
+        <p class="cta-banner__desc">
+          Haz tu pedido por WhatsApp y te lo llevamos directamente a tu casa. Rápido, fresco y delicioso.
+        </p>
+        <div class="cta-banner__buttons">
+          <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-whatsapp" style="font-size:1rem; padding: 0.85rem 2rem;">
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir por WhatsApp
+          </a>
+          <a href="tel:+573104102189" class="btn-outline" style="font-size:1rem; padding: 0.85rem 2rem;">
+            📞 Llamar: 310 410 2189
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACTO
+       ============================================ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact__header reveal">
+        <span class="section-label">Contacto</span>
+        <h2 class="section-title">¿Dónde Encontrarnos?</h2>
+        <p class="section-subtitle">
+          Estamos ubicados en el corazón de La Loma. Ven a visitarnos o pide a domicilio.
+        </p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <div class="contact-item">
+            <div class="contact-item__icon">📍</div>
+            <div class="contact-item__text">
+              <strong>Ubicación</strong>
+              <span>La Loma, El Paso, Cesar, Colombia<br />Frente a Tiendas Ara</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">📞</div>
+            <div class="contact-item__text">
+              <strong>Teléfono / Domicilios</strong>
+              <a href="tel:+573104102189">310 410 2189</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">✉️</div>
+            <div class="contact-item__text">
+              <strong>Correo Electrónico</strong>
+              <a href="mailto:jrc881922@hotmail.com">jrc881922@hotmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">🕐</div>
+            <div class="contact-item__text">
+              <strong>Horario</strong>
+              <span>Siempre abiertos — 24/7</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item__icon">📱</div>
+            <div class="contact-item__text">
+              <strong>Redes Sociales</strong>
+              <a href="https://www.facebook.com/asaderoRicopollo8822" target="_blank" rel="noopener">Síguenos en Facebook →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__map reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15660.48!2d-73.583!3d9.773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5d4faa7ce4cb67%3A0x2a1f5cbe6a3e42c2!2sLa%20Loma%2C%20El%20Paso%2C%20Cesar%2C%20Colombia!5e0!3m2!1ses!2sco!4v1696089600000!5m2!1ses!2sco"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Rico Pollo Gourmet en La Loma, Cesar"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#inicio" class="navbar__logo">
+            <img src="images/logo.jpg" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" />
+            <span class="navbar__logo-text">Rico Pollo Gourmet</span>
+          </a>
+          <p>
+            Tradición y calidad en cada bocado. El sabor auténtico de La Loma, Cesar, desde nuestro asadero a tu mesa.
+          </p>
+
+          <div class="footer__social">
+            <a href="https://www.facebook.com/asaderoRicopollo8822" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+            <a href="https://wa.me/573104102189" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+            <a href="mailto:jrc881922@hotmail.com" aria-label="Email">✉️</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Nuestro Menú</h4>
+          <ul>
+            <li><a href="#menu">Pollo Asado</a></li>
+            <li><a href="#menu">Pollo Broaster</a></li>
+            <li><a href="#menu">Pizzería</a></li>
+            <li><a href="#menu">Comidas Rápidas</a></li>
+            <li><a href="#menu">Heladería</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contáctanos</h4>
+          <ul>
+            <li><a href="tel:+573104102189">📞 310 410 2189</a></li>
+            <li><a href="mailto:jrc881922@hotmail.com">✉️ jrc881922@hotmail.com</a></li>
+            <li><a href="#">📍 La Loma, El Paso, Cesar</a></li>
+            <li><a href="#">🕐 Siempre abiertos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Rico Pollo Gourmet. Todos los derechos reservados.</span>
+        <span>Hecho con ❤️ en La Loma, Cesar 🇨🇴</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       FLOATING WHATSAPP BUTTON
+       ============================================ -->
+  <a
+    href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20🍗"
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-float"
+    id="whatsappFloat"
+    aria-label="Chatear por WhatsApp"
+  >
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
