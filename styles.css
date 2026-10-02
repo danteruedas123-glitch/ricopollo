@@ -148,12 +148,25 @@ ul { list-style: none; }
   transition: background 0.4s, box-shadow 0.4s, padding 0.4s;
 }
 
-.navbar.scrolled {
+.navbar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(13,13,13,0.92);
   backdrop-filter: blur(16px) saturate(1.6);
   -webkit-backdrop-filter: blur(16px) saturate(1.6);
   box-shadow: 0 2px 24px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.navbar.scrolled {
   padding: 0.6rem 0;
+}
+
+.navbar.scrolled::before {
+  opacity: 1;
 }
 
 .navbar .container {
@@ -588,17 +601,20 @@ ul { list-style: none; }
 
 .menu-card {
   position: relative;
+  color: inherit;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  transition: transform 0.5s var(--ease-out), box-shadow 0.5s;
+  transition: opacity 0.8s var(--ease-out), transform 0.5s var(--ease-out), box-shadow 0.5s;
   cursor: pointer;
-  group: '';
+  display: block;
+  --rx: 0deg;
+  --ry: 0deg;
 }
 
 .menu-card:hover {
-  transform: translateY(-8px);
+  transform: perspective(800px) translateY(-8px) rotateX(var(--rx)) rotateY(var(--ry));
   box-shadow: var(--shadow-glow), var(--shadow-card);
 }
 
@@ -1351,4 +1367,193 @@ ul { list-style: none; }
     flex-direction: column;
     align-items: center;
   }
+}
+
+
+/* ===================================================
+   MEJORAS DE DISEÑO (v2)
+   =================================================== */
+
+/* Botones grandes */
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+}
+.btn-lg svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Foco visible para teclado */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Estado activo del enlace de navegación */
+.navbar__links a:not(.btn-whatsapp):not(.navbar__link-highlight)[style*="color"]::after {
+  width: 100%;
+}
+
+/* WhatsApp flotante: oculto hasta hacer scroll */
+.whatsapp-float {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(0.9);
+  transition: opacity 0.4s, transform 0.4s var(--ease-out), box-shadow 0.3s;
+}
+.whatsapp-float.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.whatsapp-float.is-visible:hover {
+  transform: scale(1.1);
+}
+
+/* Stats: iconos SVG dorados dentro de un círculo */
+.stats {
+  margin-top: -3.5rem;
+}
+.hero {
+  padding-bottom: 7.5rem;
+}
+.stats__icon,
+.exp-card__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 0.9rem;
+  border-radius: 50%;
+  color: var(--color-primary);
+  background: rgba(212,162,78,0.1);
+  border: 1px solid rgba(212,162,78,0.25);
+  font-size: 0;
+}
+.stats__icon svg,
+.exp-card__icon svg {
+  width: 26px;
+  height: 26px;
+}
+.exp-card__icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 1.4rem;
+}
+.exp-card__icon svg {
+  width: 32px;
+  height: 32px;
+}
+.exp-card:hover .exp-card__icon {
+  background: rgba(212,162,78,0.18);
+  box-shadow: 0 0 28px rgba(212,162,78,0.25);
+}
+
+/* Tarjetas del menú: sombra de texto sobre imagen y CTA como píldora */
+.menu-card__cta {
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(212,162,78,0.35);
+  border-radius: 50px;
+  transition: gap 0.3s var(--ease-out), background 0.3s, color 0.3s;
+}
+.menu-card:hover .menu-card__cta {
+  background: var(--color-primary);
+  color: #0d0d0d;
+}
+.menu-card:hover .menu-card__cta svg {
+  stroke: #0d0d0d;
+}
+
+/* Cómo pedir */
+.steps {
+  padding: var(--section-padding);
+  padding-top: 0;
+}
+.steps__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.steps__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  counter-reset: step;
+  position: relative;
+}
+.step {
+  position: relative;
+  text-align: center;
+  padding: 2.4rem 1.8rem 2rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+.step__num {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  translate: -50% 0;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #0d0d0d;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent-light));
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(212,162,78,0.35);
+}
+.step h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.step p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Footer: iconos sociales SVG */
+.footer__social a svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
+}
+.footer__social a:hover svg {
+  color: var(--color-primary);
+}
+
+/* Etiqueta de sección centrada también en cabeceras centradas */
+.menu__header .section-label,
+.experience__header .section-label,
+.contact__header .section-label,
+.steps__header .section-label {
+  justify-content: center;
+}
+
+/* Reveal escalonado dentro de grillas */
+.steps__list .step:nth-child(2),
+.experience__cards .exp-card:nth-child(2) { transition-delay: 0.1s; }
+.steps__list .step:nth-child(3),
+.experience__cards .exp-card:nth-child(3) { transition-delay: 0.2s; }
+
+@media (max-width: 768px) {
+  .steps__list { grid-template-columns: 1fr; gap: 2.2rem; }
+  .stats { margin-top: -1.5rem; }
+}
+
+/* Accesibilidad: sin animaciones si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }

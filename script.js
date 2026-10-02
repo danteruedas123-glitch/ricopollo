@@ -53,19 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // ── Menu card click → WhatsApp ────────────────
-  document.querySelectorAll('.menu-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const title = card.querySelector('.menu-card__title')?.textContent || '';
-      const msg   = encodeURIComponent(
-        `Hola Rico Pollo Gourmet 🍗, me interesa pedir: ${title}. ¿Cuál es el precio?`
-      );
-      window.open(`https://wa.me/573104102189?text=${msg}`, '_blank');
-    });
-  });
-
   // ── Smooth scroll for anchor links ────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
@@ -101,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', highlightNav, { passive: true });
 
   // ── Parallax hero image on scroll ─────────────
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroBg = document.querySelector('.hero__bg img');
-  if (heroBg) {
+  if (heroBg && !reduceMotion) {
     window.addEventListener('scroll', () => {
       const scroll = window.scrollY;
       if (scroll < window.innerHeight) {
@@ -114,40 +104,45 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Floating WhatsApp button visibility ───────
   const waFloat = document.getElementById('whatsappFloat');
   if (waFloat) {
-    waFloat.style.opacity = '0';
-    waFloat.style.pointerEvents = 'none';
-    waFloat.style.transition = 'opacity 0.4s, transform 0.3s var(--ease-out), box-shadow 0.3s';
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        waFloat.style.opacity = '1';
-        waFloat.style.pointerEvents = 'auto';
-      } else {
-        waFloat.style.opacity = '0';
-        waFloat.style.pointerEvents = 'none';
-      }
-    }, { passive: true });
+    const toggleWa = () => waFloat.classList.toggle('is-visible', window.scrollY > 400);
+    window.addEventListener('scroll', toggleWa, { passive: true });
+    toggleWa();
   }
 
   // ── Tilt effect on menu cards (desktop only) ──
-  if (window.matchMedia('(hover: hover)').matches) {
+  if (!reduceMotion && window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('.menu-card').forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width  - 0.5;
         const y = (e.clientY - rect.top)  / rect.height - 0.5;
-        card.style.transform = `
-          translateY(-8px)
-          perspective(800px)
-          rotateY(${x * 6}deg)
-          rotateX(${-y * 6}deg)
-        `;
+        card.style.setProperty('--ry', `${x * 6}deg`);
+        card.style.setProperty('--rx', `${-y * 6}deg`);
       });
 
       card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
+        card.style.removeProperty('--ry');
+        card.style.removeProperty('--rx');
       });
     });
+  }
+
+  // ── Count-up en la barra de stats ─────────────
+  const counter = document.querySelector('.stats__number[data-target]');
+  if (counter && !reduceMotion) {
+    const target = Number(counter.dataset.target);
+    const countObserver = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      countObserver.disconnect();
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min((now - start) / 900, 1);
+        counter.textContent = Math.round(target * t);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.6 });
+    countObserver.observe(counter);
   }
 
 });

@@ -14,8 +14,34 @@
   <meta property="og:image" content="images/hero.jpg" />
   <meta property="og:type" content="restaurant" />
 
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <!-- Datos estructurados (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Rico Pollo Gourmet",
+    "slogan": "Tradición y Calidad",
+    "description": "Asadero, pizzería y heladería en La Loma, El Paso, Cesar. Pollo asado al carbón, broaster, pizzas artesanales, comidas rápidas y helados.",
+    "servesCuisine": ["Pollo asado", "Broaster", "Pizza", "Comidas rápidas", "Helados"],
+    "telephone": "+573104102189",
+    "email": "jrc881922@hotmail.com",
+    "image": "images/hero.jpg",
+    "hasMenu": "menu.html",
+    "acceptsReservations": false,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "La Loma, El Paso",
+      "addressRegion": "Cesar",
+      "addressCountry": "CO"
+    },
+    "sameAs": ["https://www.facebook.com/asaderoRicopollo8822"]
+  }
+  </script>
+
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <link rel="icon" type="image/png" href="images/logo-192.png" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -28,17 +54,17 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="#inicio" class="navbar__logo">
-        <img src="images/logo.jpg" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" />
+        <img src="images/logo-192.webp" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" width="48" height="48" />
         <span class="navbar__logo-text">Rico Pollo Gourmet</span>
       </a>
 
       <div class="navbar__links" id="navLinks">
         <a href="#inicio">Inicio</a>
-        <a href="menu.html" target="_blank" class="navbar__link-highlight">📋 Menú Completo ↗</a>
+        <a href="menu.html" class="navbar__link-highlight">📋 Menú Completo</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#contacto">Contacto</a>
-        <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-whatsapp">
+        <a href="#" data-wa target="_blank" rel="noopener" class="btn-whatsapp">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Pedir Domicilio
         </a>
@@ -57,12 +83,12 @@
        ============================================ -->
   <section class="hero" id="inicio">
     <div class="hero__bg">
-      <img src="images/hero.jpg" alt="Pollo asado gourmet con acompañamientos colombianos" />
+      <img src="images/hero.webp" alt="Pollo asado gourmet con acompañamientos colombianos" fetchpriority="high" />
     </div>
     <div class="hero__overlay"></div>
 
     <div class="hero__content">
-      <img src="images/logo.jpg" alt="Rico Pollo Gourmet" class="hero__logo" />
+      <img src="images/logo.webp" alt="Rico Pollo Gourmet" class="hero__logo" />
 
       <span class="hero__badge">🔥 Asadero • Pizzería • Heladería • Comidas Rápidas</span>
 
@@ -77,10 +103,10 @@
       </p>
 
       <div class="hero__buttons">
-        <a href="menu.html" target="_blank" class="btn-primary">
-          🍽️ Ver Menú & Ordenar ↗
+        <a href="menu.html" class="btn-primary">
+          🍽️ Ver Menú & Ordenar
         </a>
-        <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-outline">
+        <a href="#" data-wa target="_blank" rel="noopener" class="btn-outline">
           🛵 Pedir por WhatsApp
         </a>
       </div>
@@ -99,22 +125,22 @@
     <div class="container">
       <div class="stats__grid reveal">
         <div class="stats__item">
-          <div class="stats__icon">🍗</div>
+          <div class="stats__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3a5 5 0 0 1 4 8l-6 6-4-4 6-6"/><path d="M9 13l-5 5a2 2 0 1 0 3 3l5-5"/></svg></div>
           <div class="stats__number" data-target="5">5</div>
           <div class="stats__label">Categorías de Menú</div>
         </div>
         <div class="stats__item">
-          <div class="stats__icon">🕐</div>
+          <div class="stats__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <div class="stats__number">24/7</div>
           <div class="stats__label">Siempre Abiertos</div>
         </div>
         <div class="stats__item">
-          <div class="stats__icon">❄️</div>
+          <div class="stats__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 7l14.2 10M4.9 17L19.1 7"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></div>
           <div class="stats__number">Full</div>
           <div class="stats__label">Aire Acondicionado</div>
         </div>
         <div class="stats__item">
-          <div class="stats__icon">📺</div>
+          <div class="stats__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
           <div class="stats__number">HD</div>
           <div class="stats__label">Pantallas Deportivas</div>
         </div>
@@ -137,9 +163,9 @@
 
       <div class="menu__grid">
         <!-- Card 1: Pechuga a la Plancha & Pollos -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#pollos">
           <div class="menu-card__image">
-            <img src="images/pechuga-plancha-real.jpg" alt="Pechuga a la plancha con patacones y ensalada de maíz" />
+            <img src="images/pechuga-plancha-real.webp" loading="lazy" decoding="async" alt="Pechuga a la plancha con patacones y ensalada de maíz" />
             <span class="menu-card__badge">⭐ Foto Real</span>
           </div>
           <div class="menu-card__body">
@@ -148,16 +174,16 @@
               Pechugas marinadas y asadas a la plancha con patacones dorados y ensalada fresca con maíz dulce. O nuestro clásico pollo al carbón.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
 
         <!-- Card 2: Alitas BBQ con Ajonjolí -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#pollos">
           <div class="menu-card__image">
-            <img src="images/alitas-bbq-real.jpg" alt="Bandeja de alitas BBQ con ajonjolí y papas a la francesa" />
+            <img src="images/alitas-bbq-real.webp" loading="lazy" decoding="async" alt="Bandeja de alitas BBQ con ajonjolí y papas a la francesa" />
             <span class="menu-card__badge">🔥 Foto Real</span>
           </div>
           <div class="menu-card__body">
@@ -166,16 +192,16 @@
               Bandeja de alitas bañadas en deliciosa salsa BBQ con semillas de ajonjolí tostadas, abundante papa a la francesa y salsas de la casa.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
 
         <!-- Card 3: Pizzería Artesanal -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#pizzas">
           <div class="menu-card__image">
-            <img src="images/pizza.jpg" alt="Pizza artesanal recién horneada" />
+            <img src="images/pizza.webp" loading="lazy" decoding="async" alt="Pizza artesanal recién horneada" />
             <span class="menu-card__badge">🍕 Artesanal</span>
           </div>
           <div class="menu-card__body">
@@ -184,16 +210,16 @@
               Pizzas a la piedra con masa fresca, salsa casera y queso mozzarella abundante: Especial Rico Pollo, Hawaiana, Carnes Mixtas y Pepperoni.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
 
         <!-- Card 4: Súper Picadas & Asados -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#comidas-rapidas">
           <div class="menu-card__image">
-            <img src="images/picada-mixta-real.jpg" alt="Bandeja de picada mixta familiar con carne, pollo, patacones y papas" />
+            <img src="images/picada-mixta-real.webp" loading="lazy" decoding="async" alt="Bandeja de picada mixta familiar con carne, pollo, patacones y papas" />
             <span class="menu-card__badge">👑 Foto Real</span>
           </div>
           <div class="menu-card__body">
@@ -202,16 +228,16 @@
               Bandeja gigante para compartir con carne asada, pechuga de pollo, salchicha, pollo crujiente, patacones, papas y salsas tártara y cheddar.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
 
         <!-- Card 5: Ensaladas de Frutas & Heladería -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#heladeria">
           <div class="menu-card__image">
-            <img src="images/ensalada-frutas-real.jpg" alt="Ensalada de frutas fresca con doble bola de helado y queso rallado" />
+            <img src="images/ensalada-frutas-real.webp" loading="lazy" decoding="async" alt="Ensalada de frutas fresca con doble bola de helado y queso rallado" />
             <span class="menu-card__badge">🍓 Foto Real</span>
           </div>
           <div class="menu-card__body">
@@ -220,16 +246,16 @@
               Fresca, cremosa y deliciosa. Frutas frescas con crema especial, queso costeño rallado y doble bola de helado artesanal.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
 
         <!-- Card 6: Jugos Naturales 100% Frescos -->
-        <article class="menu-card reveal" onclick="window.open('menu.html','_blank')" style="cursor: pointer;">
+        <a class="menu-card reveal" href="menu.html#bebidas">
           <div class="menu-card__image">
-            <img src="images/jugos-naturales-real.jpg" alt="Jugos naturales y limonadas de fruta fresca" />
+            <img src="images/jugos-naturales-real.webp" loading="lazy" decoding="async" alt="Jugos naturales y limonadas de fruta fresca" />
             <span class="menu-card__badge">🍹 Foto Real</span>
           </div>
           <div class="menu-card__body">
@@ -238,11 +264,11 @@
               100% fruta fresca en agua o leche: Limonada de coco, limonada frappé, guanábana, mora, fresa, lulo y milo frío para refrescar tu día.
             </p>
             <span class="menu-card__cta">
-              Ver precio y pedir ↗
+              Ver precio y pedir
               <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </div>
-        </article>
+        </a>
       </div>
 
       <!-- Banner para ordenar en el Menú Digital Completo -->
@@ -251,10 +277,39 @@
           <h3>🍽️ ¿Deseas hacer tu pedido en línea?</h3>
           <p>Explora nuestro Menú Digital interactivo con todos los productos, combos, precios actualizados y carrito directo a WhatsApp.</p>
         </div>
-        <a href="menu.html" target="_blank" class="btn-primary btn-cta-menu">
-          Ver Carta Completa y Ordenar ↗
+        <a href="menu.html" class="btn-primary btn-cta-menu">
+          Ver Carta Completa y Ordenar
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CÓMO PEDIR
+       ============================================ -->
+  <section class="steps" id="como-pedir">
+    <div class="container">
+      <div class="steps__header reveal">
+        <span class="section-label">Pedir es fácil</span>
+        <h2 class="section-title">Tu antojo en 3 pasos</h2>
+      </div>
+      <ol class="steps__list">
+        <li class="step reveal">
+          <span class="step__num">1</span>
+          <h3>Elige tus platos</h3>
+          <p>Explora la carta digital, filtra por categoría o busca lo que se te antoje.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">2</span>
+          <h3>Arma tu pedido</h3>
+          <p>Agrega cantidades, deja tus datos de entrega y revisa el total estimado.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">3</span>
+          <h3>Envíalo por WhatsApp</h3>
+          <p>Un clic y tu pedido llega listo a nuestro WhatsApp. Lo preparamos y te lo llevamos.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -266,7 +321,7 @@
       <div class="about__grid">
         <div class="about__image-wrapper reveal">
           <div class="about__image">
-            <img src="images/broaster.jpg" alt="Interior del restaurante Rico Pollo Gourmet" />
+            <img src="images/broaster.webp" loading="lazy" decoding="async" alt="Interior del restaurante Rico Pollo Gourmet" />
           </div>
           <div class="about__float-card">
             <div class="about__float-icon">🏆</div>
@@ -338,7 +393,7 @@
 
       <div class="experience__cards">
         <div class="exp-card reveal">
-          <div class="exp-card__icon">❄️</div>
+          <div class="exp-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 7l14.2 10M4.9 17L19.1 7"/><path d="M9 4l3 2 3-2M9 20l3-2 3 2"/></svg></div>
           <h3 class="exp-card__title">Full Aire Acondicionado</h3>
           <p class="exp-card__desc">
             Nuestro local cuenta con sistema de climatización completo para que disfrutes tu comida con la máxima comodidad, sin importar el calor de afuera.
@@ -346,7 +401,7 @@
         </div>
 
         <div class="exp-card reveal">
-          <div class="exp-card__icon">📺</div>
+          <div class="exp-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
           <h3 class="exp-card__title">Pantallas HD</h3>
           <p class="exp-card__desc">
             Pantallas grandes con transmisión de partidos de fútbol, eventos deportivos y más. El plan perfecto: buena comida y buen fútbol.
@@ -354,7 +409,7 @@
         </div>
 
         <div class="exp-card reveal">
-          <div class="exp-card__icon">👨‍👩‍👧‍👦</div>
+          <div class="exp-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></div>
           <h3 class="exp-card__title">Ambiente Familiar</h3>
           <p class="exp-card__desc">
             Un espacio acogedor para compartir en familia o con amigos. Amplio, cómodo y con la mejor atención para que te sientas como en casa.
@@ -376,12 +431,12 @@
           Haz tu pedido por WhatsApp y te lo llevamos directamente a tu casa. Rápido, fresco y delicioso.
         </p>
         <div class="cta-banner__buttons">
-          <a href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio%20🍗" target="_blank" rel="noopener" class="btn-whatsapp" style="font-size:1rem; padding: 0.85rem 2rem;">
-            <svg viewBox="0 0 24 24" style="width:22px;height:22px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="#" data-wa target="_blank" rel="noopener" class="btn-whatsapp btn-lg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Pedir por WhatsApp
           </a>
-          <a href="tel:+573104102189" class="btn-outline" style="font-size:1rem; padding: 0.85rem 2rem;">
-            📞 Llamar: 310 410 2189
+          <a href="#" data-tel class="btn-outline btn-lg">
+            📞 Llamar: <span data-fill="phone">310 410 2189</span>
           </a>
         </div>
       </div>
@@ -415,7 +470,7 @@
             <div class="contact-item__icon">📞</div>
             <div class="contact-item__text">
               <strong>Teléfono / Domicilios</strong>
-              <a href="tel:+573104102189">310 410 2189</a>
+              <a href="#" data-tel><span data-fill="phone">310 410 2189</span></a>
             </div>
           </div>
 
@@ -423,7 +478,7 @@
             <div class="contact-item__icon">✉️</div>
             <div class="contact-item__text">
               <strong>Correo Electrónico</strong>
-              <a href="mailto:jrc881922@hotmail.com">jrc881922@hotmail.com</a>
+              <a href="#" data-mail><span data-fill="email">jrc881922@hotmail.com</span></a>
             </div>
           </div>
 
@@ -439,7 +494,7 @@
             <div class="contact-item__icon">📱</div>
             <div class="contact-item__text">
               <strong>Redes Sociales</strong>
-              <a href="https://www.facebook.com/asaderoRicopollo8822" target="_blank" rel="noopener">Síguenos en Facebook →</a>
+              <a href="#" data-facebook target="_blank" rel="noopener">Síguenos en Facebook →</a>
             </div>
           </div>
         </div>
@@ -465,7 +520,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#inicio" class="navbar__logo">
-            <img src="images/logo.jpg" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" />
+            <img src="images/logo-192.webp" alt="Logo Rico Pollo Gourmet" class="navbar__logo-img" width="48" height="48" />
             <span class="navbar__logo-text">Rico Pollo Gourmet</span>
           </a>
           <p>
@@ -473,9 +528,9 @@
           </p>
 
           <div class="footer__social">
-            <a href="https://www.facebook.com/asaderoRicopollo8822" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-            <a href="https://wa.me/573104102189" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-            <a href="mailto:jrc881922@hotmail.com" aria-label="Email">✉️</a>
+            <a href="#" data-facebook target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+            <a href="#" data-wa target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 10c0 3 2 5 5 5l1.2-1.4-2-1-.8.7c-.8-.3-1.6-1.1-1.9-1.9l.7-.8-1-2L9 10z"/></svg></a>
+            <a href="#" data-mail aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
           </div>
         </div>
 
@@ -504,8 +559,8 @@
         <div class="footer__col">
           <h4>Contáctanos</h4>
           <ul>
-            <li><a href="tel:+573104102189">📞 310 410 2189</a></li>
-            <li><a href="mailto:jrc881922@hotmail.com">✉️ jrc881922@hotmail.com</a></li>
+            <li><a href="#" data-tel>📞 <span data-fill="phone">310 410 2189</span></a></li>
+            <li><a href="#" data-mail>✉️ <span data-fill="email">jrc881922@hotmail.com</span></a></li>
             <li><a href="#">📍 La Loma, El Paso, Cesar</a></li>
             <li><a href="#">🕐 Siempre abiertos</a></li>
           </ul>
@@ -523,7 +578,7 @@
        FLOATING WHATSAPP BUTTON
        ============================================ -->
   <a
-    href="https://wa.me/573104102189?text=Hola%20Rico%20Pollo%20Gourmet%2C%20quiero%20hacer%20un%20pedido%20🍗"
+    href="#" data-wa
     target="_blank"
     rel="noopener"
     class="whatsapp-float"
@@ -534,6 +589,7 @@
   </a>
 
   <!-- JS -->
+  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -945,3 +945,16 @@
     text-align: center;
   }
 }
+
+
+/* Validación inline del formulario */
+.form-group input.is-invalid {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.18);
+}
+
+.field-error {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #ff8a8a;
+}

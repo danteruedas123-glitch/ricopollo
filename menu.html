@@ -9,7 +9,7 @@
   <meta name="description" content="Carta completa y pedidos en línea de Rico Pollo Gourmet en La Loma, Cesar. Pollo asado al carbón, broaster, pizzas artesanales, hamburguesas, helados y bebidas. ¡Haz tu pedido ahora!" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+  <link rel="icon" type="image/png" href="images/logo-192.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +34,7 @@
       </a>
 
       <div class="menu-header__brand">
-        <img src="images/logo.jpg" alt="Rico Pollo Gourmet" class="menu-header__logo" />
+        <img src="images/logo-192.webp" alt="Rico Pollo Gourmet" class="menu-header__logo" />
         <div>
           <h1 class="menu-header__title">Rico Pollo <span>Gourmet</span></h1>
           <p class="menu-header__sub">Menú Digital & Pedidos a Domicilio • La Loma, Cesar</p>
@@ -57,20 +57,20 @@
   <section class="menu-hero">
     <div class="container">
       <div class="menu-hero__card">
-        <div class="menu-hero__badge">🛵 Domicilios Rápidos: 310 410 2189</div>
+        <div class="menu-hero__badge">🛵 Domicilios Rápidos: <span data-fill="phone">310 410 2189</span></div>
         <h2>¡Arma tu pedido y recíbelo calientito!</h2>
         <p>Selecciona tus platos favoritos, agrega las cantidades deseadas y envíanos tu orden con 1 solo clic directamente a nuestro WhatsApp oficial.</p>
         
         <!-- BARRA DE BÚSQUEDA EN TIEMPO REAL -->
         <div class="menu-search-box">
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input type="text" id="menuSearchInput" placeholder="Buscar por plato, ingrediente o combo (ej. Broaster, Pizza, Hamburguesa)..." autocomplete="off" />
+          <input type="text" id="menuSearchInput" placeholder="Buscar plato o combo (ej. Broaster, Pizza)..." autocomplete="off" />
           <button id="clearSearchBtn" class="clear-search-btn" aria-label="Borrar búsqueda" style="display:none;">&times;</button>
         </div>
 
         <!-- BANNER DE GRAN PROMOCIÓN RELÁMPAGO -->
         <div class="menu-promo-banner" onclick="addToCart('promo-pollo-asado-completo')">
-          <img src="images/promo-pollos-real.jpg" alt="Promoción Pollo Asado y Broaster" class="menu-promo-img" />
+          <img src="images/promo-pollos-real.webp" alt="Promoción Pollo Asado y Broaster" class="menu-promo-img" />
           <div class="menu-promo-content">
             <span class="promo-tag">⚡ GRAN PROMOCIÓN RELÁMPAGO</span>
             <h3>Pollo Asado: $27.000 • Pollo Broaster: $28.000</h3>
@@ -222,6 +222,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="config.js"></script>
   <script src="menu.js"></script>
 </body>
 </html>
